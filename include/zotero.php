@@ -41,7 +41,6 @@ function teambib_get_collection() {
 
     $response = teambib_parse_headers($http_response_header);
     return array('latest_version' => $response['Last-Modified-Version'],
-                 'url_debug' => $url,
                  'collection' => $collection);
 }
 

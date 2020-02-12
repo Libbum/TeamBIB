@@ -7,11 +7,7 @@ function teambib_shortcode() {
     $team_name = get_option('member-list');
     $names = teambib_get_members($team_name);
 
-    $members = get_option('members', 'Bibliography here.');
-
-    $bib = 'From current: \n';
-    $bib .= $members;
-    $bib .= '\nFrom team-members: \n';
+    $bib .= 'From team-members: \n';
     $bib .= print_r($names, true);
     $bib .= '\nFrom Zotero: \n';
     $bib .= print_r(teambib_get_collection(), true);
