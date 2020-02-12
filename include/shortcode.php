@@ -20,9 +20,7 @@ function teambib_shortcode() {
         }
     endforeach; wp_reset_postdata();
 
-    $bib = print_r($names, true);
-
-    return $bib;
+    return print_r($names);
 
 //    $members = get_option('members', 'Bibliography here.');
 //    return $members;
