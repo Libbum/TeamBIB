@@ -10,20 +10,23 @@ function teambib_shortcode() {
 
     $names = array();
     foreach($custom_posts as $post) : setup_postdata($post);
-        $members = get_post_meta( get_the_id(), '_tmm_head', true );
+        $members = get_post_meta(get_the_id(), '_tmm_head', true);
         if (is_array($members) || is_object($members)) {
             foreach ($members as $key => $member) {
-                $first = !empty($member['_tmm_firstname']) ? $member['_tmm_firstname'] : '';
-                $last = !empty($member['_tmm_lastname']) ? $member['_tmm_lastname'] : '';
-                array_push($names, array('first' => $first, 'last' => $last));
+                array_push($names, array('first' => $member['_tmm_firstname'], 'last' => $member['_tmm_lastname']));
             }
         }
     endforeach; wp_reset_postdata();
 
-    return print_r($names);
 
-//    $members = get_option('members', 'Bibliography here.');
-//    return $members;
+    $members = get_option('members', 'Bibliography here.');
+
+    $bib = 'From current: ';
+    $bib .= $members;
+    $bib .= 'From team-members: ';
+    $bib .= print_r($names);
+
+    return $bib;
 }
 
 ?>
