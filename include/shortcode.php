@@ -13,8 +13,8 @@ function teambib_shortcode() {
         $members = get_post_meta( get_the_id(), '_tmm_head', true );
         if (is_array($members) || is_object($members)) {
             foreach ($members as $key => $member) {
-                $first = !empty($member['_tmm_firstname'])) ? $member['_tmm_firstname'] : '';
-                $last = !empty($member['_tmm_lastname'])) ? $member['_tmm_lastname'] : '';
+                $first = !empty($member['_tmm_firstname']) ? $member['_tmm_firstname'] : '';
+                $last = !empty($member['_tmm_lastname']) ? $member['_tmm_lastname'] : '';
                 array_push($names, array('first' => $first, 'last' => $last));
             }
         }
