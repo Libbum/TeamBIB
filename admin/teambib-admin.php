@@ -7,7 +7,7 @@ function teambib_config() {
 }
 
 function init() {
-    echo "The Admin Page.";
+    echo "<h1>The Admin Page...</h1>";
 }
 
 ?>
