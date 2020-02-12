@@ -24,7 +24,7 @@ function teambib_shortcode() {
     $bib = 'From current: ';
     $bib .= $members;
     $bib .= 'From team-members: ';
-    $bib .= print_r($names);
+    $bib .= print_r($names, true);
 
     return $bib;
 }
