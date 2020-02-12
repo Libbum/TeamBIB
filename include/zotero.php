@@ -25,11 +25,7 @@ function teambib_get_collection() {
         'since'  => get_option('last-checked-version'),
         'format'  => 'json',
     );
-    $url_parameters = array();
-    foreach ($arguments as $key => $value){
-        $url_parameters[] = $key.'='.$value;
-    }
-    $url = $url.implode('&', $url_parameters);
+    $url = $url.http_build_query($arguments, '', '&');
 
     $options = array(
         'http'=>array(
