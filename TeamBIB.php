@@ -10,3 +10,7 @@
  * GitHub Plugin URI: Libbum/TeamBIB
  */
 
+if ( is_admin() ) {
+    // we are in admin mode
+    require_once __DIR__ . '/admin/teambib-admin.php';
+}
