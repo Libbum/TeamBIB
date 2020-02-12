@@ -20,7 +20,7 @@ function teambib_get_collection() {
     $url .= get_option('group-id');
     $url .= '/collections/';
     $url .= get_option('collection-id');
-    $url .= '/items';
+    $url .= '/items?';
     $arguments = array(
         'since'  => get_option('last-checked-version'),
         'format'  => 'json',
