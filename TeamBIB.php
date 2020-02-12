@@ -13,9 +13,9 @@
 if ( is_admin() ) {
     // we are in admin mode
     require_once __DIR__ . '/admin/teambib-admin.php';
+} else {
+    // build our shortcode
+    require_once __DIR__ . '/include/shortcode.php';
 }
-
-// build our shortcode
-require_once __DIR__ . '/include/shortcode.php';
 
 ?>
