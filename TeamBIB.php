@@ -7,9 +7,6 @@
  * Author:            Tim DuBois
  * License:           Apache v2
  * License URI:       https://www.apache.org/licenses/LICENSE-2.0
- * Domain Path:       /languages
- * Text Domain:       github-updater
- * GitHub Plugin URI: https://github.com/afragen/github-updater
- * GitHub Languages:  https://github.com/afragen/github-updater-translations
+ * GitHub Plugin URI: Libbum/TeamBIB
  */
 
